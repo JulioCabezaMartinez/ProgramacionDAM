@@ -43,6 +43,27 @@ public class OnlineCourse {
         return false;
     }
     
+    public OnlineCourse(){
+        this.name="";
+        this.ID="";
+        this.duration=0;
+        this.teacher="";
+    }
+    
+    public OnlineCourse(String name, String ID, int duration, String teacher){
+        this.name=validName(name);
+        this.ID=validId(ID);
+        this.duration=validDuration(duration);
+        this.teacher=correctTeacher(teacher);
+    }
+    
+    public OnlineCourse(OnlineCourse copia){
+        this.name=copia.name;
+        this.ID=copia.ID;
+        this.duration=copia.duration;
+        this.teacher=copia.teacher;
+    }
+    
     public void setName(String name){
         this.name=name;
     }
