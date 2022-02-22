@@ -25,12 +25,16 @@ public class Teacher extends Person{
         this.class=copy.class;
     }
     
-    public Teacher(Course teach, Student[] class, String tama?o){
+    public Teacher(String na, String su, String em ,Course teach, Student[] class2, String tama?o){
+        this.setName(na);
+        this.setSurname(su);
+        this.setEmail(em);
+        
         this.tam=Integer.parseInt(tama?o);
         for(int i; i<this.tam; i++){
-            this.class[i]=class[i];
+            this.class[i]=class2[i];
         }
-        this.class=class;
+        this.teach=teach;
     }
     
     public void setTam(int tam){
